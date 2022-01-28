@@ -61,7 +61,7 @@ WebDriver driver;
     //“successfully” icermedigini test edin.
 
         driver.findElement(By.xpath("//button[@onclick='jsConfirm()']")).click();
-        driver.switchTo().alert().accept();
+        driver.switchTo().alert().dismiss();
         WebElement result = driver.findElement(By.xpath("//p[@id='result']"));
         String actualResult =result.getText();
         String expectedResult = "successfully";
@@ -85,6 +85,6 @@ WebDriver driver;
 
     @AfterClass
     public void teardown() {
-        // driver.close();
+        driver.close();
     }
 }

@@ -65,7 +65,7 @@ WebDriver driver;
         WebElement result = driver.findElement(By.xpath("//p[@id='result']"));
         String actualResult =result.getText();
         String expectedResult = "successfully";
-        Assert.assertTrue(actualResult.contains(expectedResult));
+        Assert.assertFalse(actualResult.contains(expectedResult));
     }
     @Test
     public void sendKeysAlert() {

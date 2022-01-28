@@ -2,7 +2,6 @@ package day10;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class C01_Allerts {
+public class C01_Alerts {
 
     //● Bir class olusturun: Alerts
     //● https://the-internet.herokuapp.com/javascript_alerts adresine gidin.

@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.TestBase;
 
@@ -31,7 +32,9 @@ public class C04_KeyboardActions extends TestBase {
         driver.findElement(By.xpath("//button[@class='ytp-large-play-button ytp-button']")).click();
 
         //videoyu calistirdiginizi test edin
+        WebElement subtitleButton = driver.findElement(By.xpath("//button[@class='ytp-subtitles-button ytp-button']"));
 
+        Assert.assertTrue(subtitleButton.isEnabled());
 
 
     }

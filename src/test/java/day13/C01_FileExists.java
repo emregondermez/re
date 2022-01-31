@@ -9,6 +9,7 @@ public class C01_FileExists {
     @Test
     public void test01() {
         System.out.println(System.getProperty("user.home"));
+        System.out.println(System.getProperty("user.dir"));
     }
 
 }

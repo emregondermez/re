@@ -51,7 +51,7 @@ public class C01_ScreenShot extends TestBase {
 
         //  2  kaydedecegimiz dosyayolunu olusturuyoruz
 
-        File tumSayfass2 = new File("src/test/java/koplesayfaSs.jpeg");
+        File tumSayfass2 = new File("src/test/java/day15/koplesayfaSs.jpeg");
         // 3 -> Gecici bir doosya olusturarak obje ile ss alalim
 
         File geciciss = ss.getScreenshotAs(OutputType.FILE);

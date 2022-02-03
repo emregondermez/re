@@ -21,7 +21,7 @@ public class C02_ScreenShot02 extends TestBase {
         //nutella icin arama yaplaim
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("nutella", Keys.ENTER);
         //sonuclarin nutella icerdigini test edelim
-        WebElement result = driver.findElement(By.xpath("//span[@class='a-color-state a-text-bold']"));
+        WebElement result = driver.findElement(By.xpath("(//div[@class='sg-col-inner'])[1]"));
         String actualResult = result.getText();
         String expectedResult = "nutella";
         Assert.assertTrue(actualResult.contains(expectedResult));

@@ -28,7 +28,7 @@ public class C02_ScreenShot02 extends TestBase {
         //testin calistiginin ispati icin sonuc yazisi web elementinin screenshot 'ini alalim
 
     // 1. adim --> Ss ini alacagimiz elementi locate edelim
-
+// WebElement result = driver.findElement(By.xpath("(//div[@class='sg-col-inner'])[1]"));
     // 2. adim --> ss i kaydedecegimiz bir dosya olusturalim
         File webElementSS = new File("src/test/java/day15/webElement.png");
 
@@ -38,6 +38,7 @@ public class C02_ScreenShot02 extends TestBase {
     // 4. adim --> gecici ss'i kayit edecegimiz dosyaya kopyalaim
         FileUtils.copyFile(geciciSS,webElementSS);
 
+     //
 
 
 

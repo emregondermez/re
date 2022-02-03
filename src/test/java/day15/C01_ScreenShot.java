@@ -45,5 +45,25 @@ public class C01_ScreenShot extends TestBase {
         FileUtils.copyFile(geciciResim,tumSayfaSS);
 
 
+
+       // 1 Take screenshot objesi olustur
+        TakesScreenshot ss = (TakesScreenshot) driver;
+
+        //  2  kaydedecegimiz dosyayolunu olusturuyoruz
+
+        File tumSayfass2 = new File("src/test/java/koplesayfaSs.jpeg");
+        // 3 -> Gecici bir doosya olusturarak obje ile ss alalim
+
+        File geciciss = ss.getScreenshotAs(OutputType.FILE);
+
+        // 4-> gecici dosyayi asil ss e kopyalayalim
+
+        FileUtils.copyFile(geciciResim,tumSayfass2);
+
+
+
+
+
+
     }
 }

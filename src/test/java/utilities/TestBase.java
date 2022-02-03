@@ -12,7 +12,10 @@ import org.testng.annotations.BeforeClass;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
 public class TestBase {
 
@@ -28,12 +31,13 @@ public class TestBase {
     }
     @AfterClass
     public void teardown() {
-  driver.quit();
+     driver.quit();
     }
 
     public void allPageSs() throws IOException {
+        String date = new SimpleDateFormat("yyMMddhhmmss").format(new Date());
         TakesScreenshot ss = (TakesScreenshot) driver;
-        File allPageSs = new File("src/test/java/Screenshots/allPageSS.jpeg");
+        File allPageSs = new File("src/test/java/Screenshots/allPageSS"+date+".jpeg");
         File temporarySs = ss.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(temporarySs,allPageSs);
 
@@ -41,7 +45,8 @@ public class TestBase {
 
     public void elementSS(WebElement element) throws IOException {
 
-        File elementSs = new File("src/test/java/Screenshots/element.jpeg");
+        String date = new SimpleDateFormat("yyMMddhhmmss").format(new Date());
+        File elementSs = new File("src/test/java/Screenshots/element"+date+".jpeg");
         File temporaryElementSs = element.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(temporaryElementSs,elementSs);
     }

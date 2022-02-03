@@ -1,21 +1,23 @@
 package day15;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.TestBase;
+
+import java.io.File;
+import java.io.IOException;
 
 public class C01_ScreenShot extends TestBase {
 
 
     @Test
-    public void screenshot() {
+    public void screenshot() throws IOException {
         // amazon sayfasina gidelim
         driver.get("https://www.amazon.com");
         //nutella icin arama yaplaim
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("nutella");
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("nutella", Keys.ENTER);
         //sonuclarin nutella icerdigini test edelim
         WebElement result = driver.findElement(By.xpath("//span[@class='a-color-state a-text-bold']"));
         String actualResult = result.getText();
@@ -32,6 +34,15 @@ public class C01_ScreenShot extends TestBase {
 
         // 2.adim --> Kaydedecegimiz dosyayi olusturalim
 
+        File tumSayfaSS = new File("src/test/java/day15/tumSayfa.png");
+
+        // 3.adim --> bir dosya daha olusturup screenshot objesi ile ss alalim
+
+        File geciciResim = tss.getScreenshotAs(OutputType.FILE);
+
+        // 4.adim --> gecici dosyayi asil kaydetmek istedigimiz asil dosyaya copy yapalim
+
+        FileUtils.copyFile(geciciResim,tumSayfaSS);
 
 
     }

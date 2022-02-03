@@ -62,6 +62,26 @@ public class C01_ScreenShot extends TestBase {
 
 
 
+        /*
+        1--> takeScreenShot objesi olustur
+        2--> dosyanin kaydedilecegi yeri belirlee  --> File objesi olustur
+        3--> gecici bir dosya olustur TakeScreenshot objesi ile ss al
+         */
+
+        TakesScreenshot ss2 = (TakesScreenshot) driver;
+        File allPageSs = new File("src/test/java/day15/allPageSS.jpeg");
+        File temporarySS = ss2.getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(temporarySS,allPageSs);
+
+
+        File all2 = new File("src/test/java/day15/all2.png");
+        File temporary2 = ss.getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(temporary2,all2);
+
+
+
+
+
 
 
 

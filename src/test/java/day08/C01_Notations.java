@@ -2,7 +2,7 @@ package day08;
 
 import org.testng.annotations.Test;
 
-public class C01_Notaions {
+public class C01_Notations {
 
 
     @Test (priority = 1)
